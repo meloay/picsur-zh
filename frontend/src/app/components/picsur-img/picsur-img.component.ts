@@ -28,6 +28,7 @@ enum PicsurImgState {
   templateUrl: './picsur-img.component.html',
   styleUrls: ['./picsur-img.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '[class.fit-viewport]': 'fitViewport' },
 })
 export class PicsurImgComponent implements OnChanges {
   private readonly logger = new Logger(PicsurImgComponent.name);
@@ -38,6 +39,7 @@ export class PicsurImgComponent implements OnChanges {
   private isInView = false;
 
   @Input('src') imageURL: string | undefined;
+  @Input() fitViewport = false;
 
   public state: PicsurImgState = PicsurImgState.Init;
 

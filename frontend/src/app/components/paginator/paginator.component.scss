@@ -2,12 +2,39 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font: 400 14px/1.5 var(--ui-font-family);
 
   margin-top: 1em;
 
   & > * {
-    margin-inline: 0.3em;
+    margin: 0;
   }
+}
+
+button.page-number {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  border-radius: 10px;
+  font: 400 14px/40px var(--ui-font-family);
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+button.page-number.is-current {
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 600;
+}
+button.mat-mdc-icon-button {
+  --mdc-icon-button-state-layer-size: 40px;
+  padding: 8px;
+}
+mat-icon {
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .paginator-filler {

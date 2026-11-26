@@ -22,6 +22,21 @@ ngui-inview {
   min-height: 1px;
 }
 
+:host(.fit-viewport) {
+  display: inline-flex;
+  max-width: 100%;
+  border-radius: 12px;
+}
+:host(.fit-viewport) img,
+:host(.fit-viewport) canvas {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(62vh, 640px);
+  object-fit: contain;
+}
+
 mat-icon {
   margin: 1rem;
   display: block;

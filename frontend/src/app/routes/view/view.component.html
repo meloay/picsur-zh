@@ -1,4 +1,4 @@
-<div class="container centered">
+<div class="container centered image-view">
   <div class="row">
     <div class="col-12">
       <h1>
@@ -18,7 +18,21 @@
     </div>
 
     <div class="col-12 py-3">
-      <picsur-img class="uploadedimage" [src]="previewLink"></picsur-img>
+      <div class="preview-stage">
+        <picsur-img
+          class="uploadedimage"
+          [fitViewport]="true"
+          [src]="previewLink"
+        ></picsur-img>
+      </div>
+      <a
+        *ngIf="image !== null"
+        class="original-link"
+        [href]="imageLinks.source"
+        target="_blank"
+        rel="noopener noreferrer"
+        >在新窗口查看完整图片 ↗</a
+      >
     </div>
 
     <div class="col-md-6 col-12">
