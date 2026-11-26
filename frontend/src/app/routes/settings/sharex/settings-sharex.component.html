@@ -1,0 +1,57 @@
+<div *ngIf="available > 0">
+  <h1>创建 ShareX 上传配置</h1>
+
+  <p>请选择用于 ShareX 上传的 API 密钥，以及分享时使用的图片格式。</p>
+
+  <div class="row">
+    <mat-form-field class="col-12 col-md-6 col-xl-4" appearance="outline">
+      <mat-label>API 密钥</mat-label>
+      <mat-select
+        msInfiniteScroll
+        (selectionChange)="onSelectionChange($event)"
+        (infiniteScroll)="getNextBatch()"
+        [complete]="loaded === available"
+      >
+        <mat-option *ngFor="let key of apikeys$ | async" [value]="key.key">{{
+          key.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-3 col-xl-2" appearance="outline">
+      <mat-label>图片格式</mat-label>
+      <mat-select [(value)]="selectedFormat">
+        <mat-option *ngFor="let format of formatOptions" [value]="format.key">
+          {{ format.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button
+        color="primary"
+        mat-raised-button
+        [disabled]="key === null"
+        (click)="onExport()"
+      >
+        导出配置
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="available === 0">
+  <h1>暂无 API 密钥</h1>
+  <p>创建 ShareX 上传配置前，请先创建至少一个 API 密钥。</p>
+
+  <button color="primary" mat-raised-button routerLink="/settings/apikeys">
+    创建 API 密钥
+  </button>
+</div>
+
+<div *ngIf="available < 0">
+  <h1>加载中</h1>
+  <mat-spinner></mat-spinner>
+</div>

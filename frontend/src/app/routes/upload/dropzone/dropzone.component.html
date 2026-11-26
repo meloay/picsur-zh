@@ -1,0 +1,11 @@
+<div
+  class="dropzone"
+  role="button"
+  tabindex="0"
+  aria-label="选择图片上传，或拖放、粘贴图片"
+  (keydown.enter)="onContainerClick(); $event.preventDefault()"
+  (keydown.space)="onContainerClick(); $event.preventDefault()"
+  (click)="onContainerClick()"
+>
+  <ng-content></ng-content>
+</div>

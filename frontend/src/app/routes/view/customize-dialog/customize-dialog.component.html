@@ -1,0 +1,94 @@
+<div class="dialog-text">
+  <div class="row">
+    <div class="col-12">
+      <h1>自定义图片</h1>
+    </div>
+    <div class="col-xl-4 col-12">
+      <mat-form-field subscriptSizing="dynamic">
+        <mat-label>格式</mat-label>
+        <mat-select [(value)]="selectedFormat">
+          <mat-option *ngFor="let format of formatOptions" [value]="format.key">
+            {{ format.value }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-xl-2 col-md-3 col-sm-6 col-12">
+      <mat-form-field [matTooltip]="sizeTooltip" subscriptSizing="dynamic">
+        <mat-label>高度</mat-label>
+        <input
+          matInput
+          type="number"
+          min="0"
+          max="32768"
+          [(ngModel)]="height"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="col-xl-2 col-md-3 col-sm-6 col-12">
+      <mat-form-field
+        subscriptSizing="dynamic"
+        appearance="outline"
+        [matTooltip]="sizeTooltip"
+      >
+        <mat-label>宽度</mat-label>
+        <input matInput type="number" min="0" max="32768" [(ngModel)]="width" />
+      </mat-form-field>
+    </div>
+
+    <div class="col-xl-2 col-md-3 col-sm-6 col-12">
+      <mat-form-field subscriptSizing="dynamic">
+        <mat-label>旋转</mat-label>
+        <mat-select [(value)]="rotate">
+          <mat-option *ngFor="let option of rotationOptions" [value]="option">
+            {{ option }}°
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-xl-2 col-md-3 col-sm-6 col-12">
+      <mat-form-field subscriptSizing="dynamic">
+        <mat-label>质量 %</mat-label>
+        <input matInput type="number" min="0" max="100" [(ngModel)]="quality" />
+      </mat-form-field>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="flipx"> 水平翻转 </mat-slide-toggle>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="flipy"> 垂直翻转 </mat-slide-toggle>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="shrinkonly">仅缩小</mat-slide-toggle>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="greyscale">灰度</mat-slide-toggle>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="noalpha"> 移除透明通道 </mat-slide-toggle>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 col-12">
+      <mat-slide-toggle [(ngModel)]="negative">反色</mat-slide-toggle>
+    </div>
+
+    <div class="col-12">
+      <copy-field
+        subscriptSizing="dynamic"
+        label="自定义图片链接"
+        [value]="getURL()"
+      ></copy-field>
+    </div>
+  </div>
+  <div class="dialog-buttons">
+    <button mat-flat-button (click)="close()">关闭</button>
+  </div>
+</div>

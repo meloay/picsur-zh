@@ -1,0 +1,26 @@
+{
+  "theme_color": "#f5f8f7",
+  "background_color": "#f5f8f7",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "image/icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "image/icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "orientation": "portrait",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "zh-CN",
+  "name": "Picsur",
+  "short_name": "Picsur",
+  "description": "简洁易用的自托管图床，轻松上传、管理和分享图片"
+}

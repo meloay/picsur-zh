@@ -1,0 +1,149 @@
+ngx-dropzone {
+  display: inherit;
+  align-items: inherit;
+  height: initial;
+  background: inherit;
+  cursor: inherit;
+  color: inherit;
+  border: initial;
+  border-radius: initial;
+  font-size: inherit;
+
+  width: 100%;
+  height: 100%;
+
+  &.ngx-dz-hovered {
+    border-style: initial;
+  }
+}
+
+.centered {
+  padding-inline: 1rem;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+.upload-workspace {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 24px 32px;
+}
+.workspace-heading {
+  margin-bottom: 32px;
+}
+.eyebrow {
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.workspace-heading h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 14px 0 8px;
+}
+.workspace-heading p,
+.centered p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.upload-panel {
+  height: 350px;
+  border: 1px dashed var(--upload-border);
+  border-radius: 20px;
+  background: var(--upload-bg);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.upload-panel:hover,
+.upload-panel:focus-within {
+  border-color: var(--accent-text);
+  background: var(--upload-hover);
+}
+.upload-symbol {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: var(--icon-bg);
+  color: var(--accent-text);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.centered h2 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.upload-cta {
+  display: inline-block;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.upload-note {
+  display: block;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 16px;
+}
+.workspace-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+.workspace-features span {
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 500;
+}
+.workspace-features p {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 8px;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .upload-workspace {
+    padding: 0 8px 24px;
+  }
+  .workspace-heading {
+    margin-bottom: 24px;
+  }
+  .upload-panel {
+    height: 340px;
+  }
+  .workspace-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .workspace-features p {
+    margin-bottom: 0;
+  }
+}
+
+// unstyle a href
+a {
+  color: inherit;
+  text-decoration: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

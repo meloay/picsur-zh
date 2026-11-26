@@ -1,0 +1,40 @@
+<section class="upload-workspace">
+  <header class="workspace-heading">
+    <span class="eyebrow">PICSUR / 图片空间</span>
+    <h1>每一张图片，都值得好好分享。</h1>
+    <p>上传、管理、分享，在一个简洁的空间里完成。</p>
+  </header>
+  <div class="content-border upload-panel">
+    <my-dropzone *ngIf="canUpload">
+      <input type="file" fileInput [formControl]="fileControl" />
+      <div class="centered">
+        <span class="upload-symbol" aria-hidden="true">↑</span>
+        <h2>把图片放到这里</h2>
+        <p>拖放文件，或粘贴剪贴板中的图片</p>
+        <span class="upload-cta">选择图片</span>
+        <span class="upload-note">上传后即可获取分享链接</span>
+      </div>
+    </my-dropzone>
+
+    <div class="centered" *ngIf="!canUpload">
+      <span class="upload-symbol" aria-hidden="true">↑</span>
+      <h2>你的图片分享空间</h2>
+      <p>登录后开始上传与管理图片</p>
+      <a class="upload-cta" routerLink="/user/login">登录账户</a>
+    </div>
+  </div>
+  <div class="workspace-features">
+    <div>
+      <span>01 / 轻松上传</span>
+      <p>支持拖放、选择文件与粘贴图片</p>
+    </div>
+    <div>
+      <span>02 / 自由处理</span>
+      <p>按需调整图片尺寸与输出格式</p>
+    </div>
+    <div>
+      <span>03 / 即刻分享</span>
+      <p>一键复制链接，嵌入博客与社区</p>
+    </div>
+  </div>
+</section>

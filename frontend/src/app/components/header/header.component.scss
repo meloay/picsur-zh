@@ -1,0 +1,66 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.svg-logo {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 48px;
+    width: 48px;
+    border-radius: 20%;
+  }
+}
+
+.svg-logo-text {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 32px;
+  }
+}
+
+.menu-username {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+mat-toolbar {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  padding-inline: clamp(16px, 4vw, 48px);
+  height: 64px;
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+
+  box-shadow: none;
+}
+
+.loading-bar {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+}
