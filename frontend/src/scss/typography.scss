@@ -1,0 +1,93 @@
+// One type scale for both themes, including Material's body-level overlays.
+:root {
+  --ui-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  --ui-font-size: 14px;
+  --ui-font-small: 12px;
+  --ui-line-height: 1.65;
+}
+
+body.mat-typography {
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size);
+  line-height: var(--ui-line-height);
+}
+
+.mat-mdc-menu-panel,
+.mat-mdc-menu-item,
+.mat-mdc-select-panel,
+.mat-mdc-option,
+.mat-mdc-nav-list,
+.mat-mdc-list-item,
+.mat-mdc-form-field,
+.mat-mdc-select,
+.mat-mdc-slide-toggle,
+.mat-mdc-table,
+.mat-mdc-paginator {
+  --mat-menu-item-label-text-font: var(--ui-font-family);
+  --mat-menu-item-label-text-size: var(--ui-font-size);
+  --mat-menu-item-label-text-weight: 400;
+  --mat-menu-item-label-text-line-height: var(--ui-line-height);
+  --mat-menu-item-label-text-tracking: 0;
+  --mdc-list-list-item-label-text-font: var(--ui-font-family);
+  --mdc-list-list-item-label-text-size: var(--ui-font-size);
+  --mdc-list-list-item-label-text-weight: 400;
+  --mdc-list-list-item-label-text-tracking: 0;
+  --mdc-list-list-item-label-text-line-height: var(--ui-line-height);
+  --mdc-filled-text-field-label-text-font: var(--ui-font-family);
+  --mdc-filled-text-field-label-text-size: var(--ui-font-size);
+  --mdc-outlined-text-field-label-text-font: var(--ui-font-family);
+  --mdc-outlined-text-field-label-text-size: var(--ui-font-size);
+  --mat-form-field-container-text-font: var(--ui-font-family);
+  --mat-form-field-container-text-size: var(--ui-font-size);
+  --mat-form-field-container-text-line-height: 24px;
+  --mat-form-field-subscript-text-size: var(--ui-font-small);
+  --mat-select-trigger-text-font: var(--ui-font-family);
+  --mat-select-trigger-text-size: var(--ui-font-size);
+  --mat-select-trigger-text-line-height: 24px;
+  --mat-switch-label-text-font: var(--ui-font-family);
+  --mat-switch-label-text-size: var(--ui-font-size);
+  --mat-switch-label-text-tracking: 0;
+  --mat-table-row-item-label-text-font: var(--ui-font-family);
+  --mat-table-row-item-label-text-size: var(--ui-font-size);
+  font-family: var(--ui-font-family);
+  font-size: var(--ui-font-size);
+}
+
+.mat-mdc-menu-panel .menu-username h2 {
+  font: 500 15px/1.6 var(--ui-font-family);
+}
+
+.settings-page {
+  font: 400 var(--ui-font-size) / var(--ui-line-height) var(--ui-font-family);
+
+  h1 {
+    font: 600 22px/1.5 var(--ui-font-family);
+    margin-bottom: 24px;
+  }
+  h2 {
+    font: 500 16px/1.6 var(--ui-font-family);
+    margin: 24px 0 12px;
+  }
+  h3 {
+    font: 500 14px/1.65 var(--ui-font-family);
+  }
+  p,
+  label,
+  input,
+  select,
+  textarea {
+    font-family: var(--ui-font-family);
+    font-size: var(--ui-font-size);
+  }
+  .mat-mdc-header-cell {
+    font: 500 13px/1.65 var(--ui-font-family);
+  }
+  .mat-mdc-chip {
+    --mdc-chip-label-text-size: var(--ui-font-small);
+  }
+}
+
+.mat-mdc-nav-list [mat-subheader] {
+  font: 500 12px/1.65 var(--ui-font-family);
+}

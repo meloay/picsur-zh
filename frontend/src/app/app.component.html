@@ -18,6 +18,7 @@
       <div class="header-spacer"></div>
       <div
         class="grow-full relative"
+        [class.settings-page]="isSettingsPage"
         [class.container]="wrapContentWithContainer"
         [@mainAnimation]="getRouteAnimData()"
       >

@@ -50,6 +50,10 @@ export class AppComponent implements OnInit {
     return this.router.url;
   }
 
+  public get isSettingsPage(): boolean {
+    return /^\/settings(?:[/?#]|$)/.test(this.router.url);
+  }
+
   public ngOnInit() {
     this.subscribeRouter();
     this.subscribeMobile();
